@@ -14,7 +14,7 @@ after_success:
   - docker build -t mohsin1708/multi-server ./server
   - docker build -t mohsin1708/multi-worker ./worker
   # Login into docker
-  - echo "$Docker_password" | docker login -u "Docker_id" --password-stdin
+  - echo "$Docker_password" | docker login -u "$Docker_id" --password-stdin
   # Take those push images
   - docker push mohsin1708/multi-client
   - docker push mohsin1708/multi-nginx
